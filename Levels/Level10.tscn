@@ -24,29 +24,24 @@ can_sleep = false
 
 [node name="RemovablePlatform" parent="." instance=ExtResource( 4 )]
 position = Vector2( 100, 120 )
-rotation = 0.0
 width = 80
 
 [node name="RemovablePlatform2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 200, 120 )
-rotation = 0.0
 width = 80
 
 [node name="Platform" parent="." instance=ExtResource( 5 )]
 position = Vector2( 485, 445 )
-rotation = 0.0
 width = 80
 height = 40
 
 [node name="Platform5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 401.468, 331.54 )
-rotation = 0.0
 width = 40
 height = 40
 
 [node name="Platform3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 719.101, 507.862 )
-rotation = 0.0
 width = 50
 
 [node name="Platform2" parent="." instance=ExtResource( 5 )]

@@ -30,9 +30,13 @@ func set_height(new_height):
 		on_changed()
 		update()
 
+var xGraceArea = 20
+var yGraceArea = 5
+
 func on_changed():
-	if get_child_count()>0:
+	if get_child_count()>1:
 		$TextureRect.rect_size = Vector2(width,height)
 		$TextureRect.rect_position = Vector2(-width/2, -height/2)
 		#$SpikeShape.shape.extents = Vector2(width/2, height/2)
-		$Area2D/AreaShape.shape.extents = Vector2(width/2, height/2)
+		$Area2D/AreaShape.shape.extents = Vector2(width/2-xGraceArea, height-yGraceArea)
+		$CollisionShape2D.shape.extents = Vector2(width/2-xGraceArea, height-yGraceArea)

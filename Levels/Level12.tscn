@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Physics Objects/Scenes/Star.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Physics Objects/Scenes/RemovablePlatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Physics Objects/Scenes/MainBall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Physics Objects/Scenes/Goal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Physics Objects/Scenes/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Physics Objects/Scenes/RotatingPlatform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Physics Objects/Scenes/RadiusChain.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/Scenes/HintText.tscn" type="PackedScene" id=8]
+
+[node name="Level12" type="Node2D"]
+
+[node name="Star" parent="." instance=ExtResource( 1 )]
+position = Vector2( 481.891, 107.258 )
+
+[node name="Star2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 274.261, 164.083 )
+
+[node name="Star3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 713.561, 384.827 )
+
+[node name="RemovablePlatform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 807.087, 446.771 )
+rotation = 0.101265
+width = 422
+
+[node name="MainBall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 44.6371, 18.0577 )
+
+[node name="Goal" parent="." instance=ExtResource( 4 )]
+position = Vector2( 889.652, 546.974 )
+
+[node name="Spikes" parent="." instance=ExtResource( 5 )]
+position = Vector2( 650.523, 71.5968 )
+rotation = -1.72247
+width = 256
+
+[node name="RotatingPlatform" parent="." instance=ExtResource( 6 )]
+position = Vector2( 420.497, 303.064 )
+rotation = -0.666144
+angular_velocity = 2.0
+
+[node name="RadiusChain" parent="." instance=ExtResource( 7 )]
+position = Vector2( 164.509, 136.986 )
+
+[node name="HintText" parent="." instance=ExtResource( 8 )]
+margin_left = 43.0
+margin_top = 448.0
+margin_right = 445.0
+margin_bottom = 578.0
+text = "You would expect the physics to behave the same every time, wouldn't you?"

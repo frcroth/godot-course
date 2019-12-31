@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Physics Objects/Scenes/MovingPlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Physics Objects/Scenes/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Physics Objects/Scenes/MainBall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Physics Objects/Scenes/RadiusChain.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Physics Objects/Scenes/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Physics Objects/Scenes/RemovablePlatform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Physics Objects/Scenes/Goal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Physics Objects/Scenes/Star.tscn" type="PackedScene" id=8]
+
+[node name="Level13" type="Node2D"]
+
+[node name="MovingPlatform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 321.841, 194.51 )
+rotation = 1.5708
+scale = Vector2( 1, 1 )
+width = 252
+
+[node name="Platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 320.966, 323.618 )
+scale = Vector2( 1, 1 )
+width = 35
+
+[node name="Platform2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 737.728, 463.777 )
+rotation = 0.0493158
+scale = Vector2( 1, 1 )
+
+[node name="Platform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 236.37, 417.949 )
+rotation = 0.0811217
+scale = Vector2( 1, 1 )
+
+[node name="MainBall" parent="." instance=ExtResource( 3 )]
+position = Vector2( -47.0342, 15.7516 )
+rotation = -0.0240183
+
+[node name="RadiusChain" parent="." instance=ExtResource( 4 )]
+position = Vector2( 213.395, 159.82 )
+radius = 96
+
+[node name="Spikes" parent="." instance=ExtResource( 5 )]
+position = Vector2( 529.634, 480.62 )
+
+[node name="RemovablePlatform" parent="." instance=ExtResource( 6 )]
+position = Vector2( 102.804, 64.2341 )
+rotation = 0.0633675
+width = 361
+
+[node name="Goal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 940.505, 553.102 )
+
+[node name="Platform4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 483.303, 123.627 )
+
+[node name="Star" parent="." instance=ExtResource( 8 )]
+position = Vector2( 747.613, 419.748 )
+
+[node name="Star2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 277.7, 239.491 )
+
+[node name="Star3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 472.875, 392.399 )

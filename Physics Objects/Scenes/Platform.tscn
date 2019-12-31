@@ -10,7 +10,6 @@ extents = Vector2( 108, 15 )
 
 [node name="Platform" type="StaticBody2D"]
 position = Vector2( 263.401, 217.871 )
-rotation = -0.436332
 script = ExtResource( 1 )
 width = 217
 
