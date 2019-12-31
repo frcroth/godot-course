@@ -80,7 +80,7 @@ RopeManager="res://Autoload Scripts/RopeManager.gd"
 
 [physics]
 
-2d/default_gravity=250
+2d/default_gravity=400
 
 [rendering]
 

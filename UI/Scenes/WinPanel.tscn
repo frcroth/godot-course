@@ -7,7 +7,7 @@
 [ext_resource path="res://UI/Textures/next.png" type="Texture" id=5]
 [ext_resource path="res://UI/Scenes/StarCountPanel.tscn" type="PackedScene" id=6]
 
-[sub_resource type="ParticlesMaterial" id=2]
+[sub_resource type="ParticlesMaterial" id=1]
 emission_shape = 2
 emission_box_extents = Vector3( 600, 1, 1 )
 flag_disable_z = true
@@ -19,8 +19,7 @@ color = Color( 1, 0, 0, 1 )
 hue_variation = 1.0
 hue_variation_random = 1.0
 
-[sub_resource type="Animation" id=1]
-resource_name = "Animation1"
+[sub_resource type="Animation" id=2]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -47,7 +46,7 @@ emitting = false
 amount = 1000
 lifetime = 4.0
 one_shot = true
-process_material = SubResource( 2 )
+process_material = SubResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -91,7 +90,8 @@ icon = ExtResource( 5 )
 [node name="Label" type="Label" parent="Panel"]
 anchor_right = 1.0
 margin_top = 9.0
-margin_bottom = 31.0
+margin_right = -1.0
+margin_bottom = 40.0
 text = "You have completed this level!
 "
 align = 1
@@ -114,4 +114,4 @@ margin_right = 68.0246
 margin_bottom = 79.9783
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Animation1 = SubResource( 1 )
+anims/Animation1 = SubResource( 2 )

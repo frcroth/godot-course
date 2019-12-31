@@ -6,7 +6,7 @@ var hook = preload("res://Physics Objects/Scenes/ChainLinkHook.tscn")
 var link = preload("res://Physics Objects/Scenes/ChainLink.tscn")
 
 onready var circle : Area2D =$Circle
-onready var collisionShape : CollisionShape2D = $Circle/CircleShape # DOWSNT WORK, WHY NOT?
+onready var collisionShape : CollisionShape2D = $Circle/CircleShape # DOESNT WORK, WHY NOT?
 export var radius = 128 setget set_radius
 
 var connected_body : PhysicsBody2D
@@ -22,7 +22,7 @@ func _ready():
 	set_radius(radius)
 
 func on_body_enter(body : PhysicsBody2D):
-	if body.is_in_group("MainBall"):
+	if body.is_in_group("MainBall") and !ropeset:
 		ropeset = true
 		connected_body = body
 		buildRope()
@@ -32,7 +32,7 @@ func buildRope():
     total_delta_vector = total_delta_vector * max(total_delta_vector.length() - 30, 10) / (total_delta_vector.length())
     var links = int(total_delta_vector.length() / 10)
     var current_hook = hook.instance()
-    add_child(current_hook)
+    call_deferred("add_child",current_hook)
     current_hook.set_position(Vector2(0, 0))
     var last_link = current_hook
     var delta_vector = total_delta_vector / (links - 1)
@@ -44,7 +44,7 @@ func buildRope():
             last_link.add_child(current_link)
             current_link.set_position(delta_vector)
         else:
-            add_child(current_link)
+            call_deferred("add_child",current_link)
             current_link.set_position(delta_vector * (index + 1))
         if wait_first:
             all_links.append(last_link)
@@ -55,7 +55,7 @@ func buildRope():
     last_link.manually_connected_body = connected_body
     if wait_first:
         all_links.append(last_link)
-        connected_body.mode = RigidBody.MODE_STATIC
+#        connected_body.mode = RigidBody.MODE_STATIC
     else:
         last_link.manual_configure()
 

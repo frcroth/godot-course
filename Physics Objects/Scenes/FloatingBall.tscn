@@ -7,7 +7,8 @@ radius = 25.5563
 
 [node name="FloatingBall" type="RigidBody2D"]
 position = Vector2( 455.367, 368.017 )
-gravity_scale = -7.71
+mass = 5.0
+gravity_scale = -3.0
 can_sleep = false
 
 [node name="Sprite" type="Sprite" parent="."]

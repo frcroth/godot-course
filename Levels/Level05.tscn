@@ -30,13 +30,13 @@ rotation = 0.763055
 position = Vector2( 380.11, 537.802 )
 
 [node name="Booster" parent="." instance=ExtResource( 5 )]
-position = Vector2( 240.983, 219.757 )
-rotation = -1.00971
+position = Vector2( 220.577, 199.351 )
+rotation = -0.514251
 force = 700
 
 [node name="Booster2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 664.617, 202.741 )
-rotation = 2.18557
+position = Vector2( 704.854, 182.623 )
+rotation = 2.11607
 
 [node name="Star3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 589.995, 208.419 )

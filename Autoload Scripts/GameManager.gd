@@ -35,6 +35,7 @@ func _ready():
 		if current_level_index >= 0:
 			current_level = get_tree().current_scene
 			call_deferred("load_options_bar")
+			call_deferred("load_star_count")
 			running_game = true
 
 func unload_current_level():

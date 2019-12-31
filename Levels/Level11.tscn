@@ -1,12 +1,40 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Physics Objects/Scenes/MainBall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Physics Objects/Scenes/RadiusChain.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Physics Objects/Scenes/Goal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Physics Objects/Scenes/Star.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/Scenes/HintText.tscn" type="PackedScene" id=5]
 
 [node name="Level11" type="Node2D"]
 
 [node name="MainBall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 76.7311, 26.8654 )
 
+[node name="RadiusChain2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 429.863, 374.95 )
+
 [node name="RadiusChain" parent="." instance=ExtResource( 2 )]
-position = Vector2( 195.314, 207.245 )
+position = Vector2( 191.462, 377.416 )
+
+[node name="RadiusChain3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 673.443, 371.381 )
+
+[node name="Goal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 849.252, 556.443 )
+
+[node name="Star" parent="." instance=ExtResource( 4 )]
+position = Vector2( 302.438, 503.388 )
+
+[node name="Star2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 558.394, 501.172 )
+
+[node name="Star3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 807.696, 481.274 )
+
+[node name="HintText" parent="." instance=ExtResource( 5 )]
+margin_left = 259.469
+margin_top = 60.6846
+margin_right = 674.469
+margin_bottom = 190.685
+text = "Due to budgeting concerns, ropes will now only be deployed if needed"

@@ -4,6 +4,7 @@ extends Area2D
 var isActive = true
 onready var sprite = $Sprite
 export var force = 500
+var gravityFactor = 5
 onready var animationplayer = $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
@@ -20,8 +21,8 @@ func activate(body : PhysicsBody2D):
 	isActive = false
 	animationplayer.play("boostAnimation")
 	sprite.texture =  load("res://Physics Objects/Textures/boostused.png")
-	var x1 = force
-	var y1 = force
+	var x1 = force* gravityFactor
+	var y1 = force* gravityFactor
 	var x2 = cos(rotation_degrees*degToRad)*x1 - sin(rotation_degrees*degToRad)*y1
 	var y2 = sin(rotation_degrees*degToRad)*x1 + cos(rotation_degrees*degToRad)*y1
 	body.apply_impulse(Vector2(0,0),Vector2(x2,y2))
