@@ -4,7 +4,7 @@ class_name Pickable
 onready var area : Area2D = $Body/Area2D
 onready var pickable_body : Node = $Body
 onready var animation_player : AnimationPlayer = $AnimationPlayer
-onready var audio_player : AudioStreamPlayer = $AudioStreamPlayer
+#onready var audio_player : AudioStreamPlayer = $AudioStreamPlayer
 onready var particles : Particles2D = $Particles2D
 
 var picked = false
@@ -30,8 +30,8 @@ func twinkle():
 func pick_up():
 	if !picked:
 		picked = true
-		if audio_player != null:
-			audio_player.play()
+#		if audio_player != null:
+#			audio_player.play()
 		if particles != null:
 			particles.emitting = true
 		pickable_body.visible = false

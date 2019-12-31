@@ -5,7 +5,7 @@
 [ext_resource path="res://Physics Objects/Textures/radius.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 96.0
+radius = 128.0
 
 [node name="RadiusChain" instance=ExtResource( 1 )]
 position = Vector2( 0, 0 )

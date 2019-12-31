@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Physics Objects/Scenes/MainBall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Physics Objects/Scenes/Goal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Physics Objects/Scenes/Platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Physics Objects/Scenes/Bubble.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Physics Objects/Scenes/RadiusChain.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Physics Objects/Scenes/Star.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI/Scenes/HintText.tscn" type="PackedScene" id=7]
+
+[node name="Level14" type="Node2D"]
+
+[node name="MainBall" parent="." instance=ExtResource( 1 )]
+position = Vector2( 86.4689, 68.7141 )
+
+[node name="Goal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 891.065, 309.416 )
+
+[node name="Platform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 716.971, 237.549 )
+rotation = 0.0947914
+
+[node name="Bubble" parent="." instance=ExtResource( 4 )]
+position = Vector2( 362.795, 370.691 )
+rotation = 0.174182
+
+[node name="Platform2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 194.317, 391.384 )
+rotation = 0.174182
+width = 308
+
+[node name="RadiusChain" parent="." instance=ExtResource( 5 )]
+position = Vector2( 463.974, 44.2393 )
+
+[node name="Star2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 286.537, 362.314 )
+
+[node name="Star3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 612.828, 150.735 )
+
+[node name="Star" parent="." instance=ExtResource( 6 )]
+position = Vector2( 360.462, 166.03 )
+
+[node name="HintText" parent="." instance=ExtResource( 7 )]
+margin_left = 612.0
+margin_top = 442.0
+margin_right = 977.0
+margin_bottom = 572.0
+text = "Bubbles make you go up. Press to pop. It's not like we didn't have ways to do that before..."
